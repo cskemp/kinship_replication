@@ -46,23 +46,17 @@ clear all
 % Run specification goes here. See the README file for the specifications
 % used for the different analyses in the paper.
 
-patterns = [100, 1,1, 2, 3,3,6,1,0];  
-groups = {[12]};  
-rstages = {[1,2,3]};
-
-thisrun = [];
-
-
-% CK_2025
-% patterns = [100, 1,1, 9, 3,3,6,1,0];
+% Plot a figure like Figure 4A in the paper 
+% patterns = [100, 10,10,  10, 10,10,6,1,0];
 % groups = {[12]};
-%rstages = {[3,4,5,6,10]};
+% rstages = {[8]};
 
-patterns = [100, 10,10,  10, 10,10,6,1,0];
-groups = {[12]};
+% Plot Figure 4C
+patterns = [100, 1,1, 1, 4,3,6,1,0];
+groups = {[14:19]};
 rstages = {[8]};
 
-% end CK_2025 
+thisrun = [];
 
 for i = 1:length(groups)
   gs = groups{i};
