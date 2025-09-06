@@ -1,0 +1,7 @@
+; run-specific parameters for scoring partitions
+;
+--outfile=/Users/ckemp/modelruns/kinship25/cost_19_1_1_2_2_6_rpt1_rand0
+--partfile=/Users/ckemp/modelruns/kinship25/dlinkout_19_1_1_2_2_rpt1.txt
+--compexfile=/Users/ckemp/modelruns/kinship25/compex19_1_1_2_2.txt
+--needfile=/Users/ckemp/modelruns/kinship25/needprobs19_6.txt
+--nhalf=5

@@ -1,0 +1,12 @@
+Perl scripts for processing complexity and cost files.
+
+complexmin.pl: combine two complexity files, taking the lower complexity
+value in each case
+
+combinescorecost.pl:  merge a complexity file and a cost file (duplicate
+entries preserved)
+
+combinescorecost_noduples.pl: merge a complexity file and a cost file
+(duplicate entries stripped)
+
+

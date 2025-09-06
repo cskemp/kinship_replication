@@ -1,0 +1,11 @@
+; run-specific parameters for scoring partitions
+--nsearch=psnsXX
+--outfile=outXX
+--partfile=partXX
+--enumindfile=enumXX
+--subindfile=
+--depfile=depXX
+--cxfile=complexXX
+--cxcfile=totalcxcXX
+--rmatfile=rmatXX
+--rheuristic=rhXX

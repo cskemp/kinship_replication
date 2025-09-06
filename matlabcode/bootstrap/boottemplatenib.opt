@@ -1,0 +1,10 @@
+; run-specific parameters for scoring partitions
+--nsearch=10000
+--outfile=outXX
+--partfile=partXX
+--enumindfile=/Users/ckemp/modelruns/kinshipreleasetest/enumind12_1_1_7_2.txt
+--subindfile=
+--depfile=/Users/ckemp/modelruns/kinshipreleasetest/dependency12_1_1_7_2.txt
+--cxfile=/Users/ckemp/modelruns/kinshipreleasetest/complexity12_1_1_7_2.txt
+--cxcfile=/Users/ckemp/modelruns/kinshipreleasetest/totalcomplexity12_1_1_7_2.txt
+--rmatfile=/Users/ckemp/modelruns/kinshipreleasetest/rmat12_1_1_7_2.txt

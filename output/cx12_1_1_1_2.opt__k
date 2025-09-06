@@ -1,0 +1,11 @@
+; run-specific parameters for scoring partitions
+--nsearch=10000
+--outfile=/Users/ckemp/modelruns/kinship25/complex_12_1_1_1_2_rpt1_rand0__k
+--partfile=/Users/ckemp/modelruns/kinship25/dlinkout_12_1_1_1_2_rpt1.txt__k
+--enumindfile=/Users/ckemp/modelruns/kinship25/enumind12_1_1_1_2.txt
+--subindfile=
+--depfile=/Users/ckemp/modelruns/kinship25/dependency12_1_1_1_2.txt
+--cxfile=/Users/ckemp/modelruns/kinship25/complexity12_1_1_1_2.txt
+--cxcfile=/Users/ckemp/modelruns/kinship25/totalcomplexity12_1_1_1_2.txt
+--rmatfile=/Users/ckemp/modelruns/kinship25/rmat12_1_1_1_2.txt
+--rheuristic=1

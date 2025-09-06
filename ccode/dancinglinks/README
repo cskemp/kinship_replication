@@ -1,0 +1,38 @@
+Usage:
+======
+
+Type:
+
+>  dancinglinks 1 < infile > outfile
+
+- INFILE specifies a set of categories, each of which includes one or more
+  objects
+
+- OUTFILE lists all partitions of the full set of objects
+
+- if the argument 1 is omitted, OUTFILE will show the total number of
+  partitions but not list these partitions
+
+Purpose:
+========
+
+Enumerate the partitions of a set of objects that can be constructed
+from the categories specified in INFILE
+
+Acknowledgements:
+=================
+
+dancinglinks.c is based on Donald Knuth's implementation of the dancing
+links algorithm, which is available from 
+
+http://www-cs-faculty.stanford.edu/~knuth/programs/dance.w
+
+To convert this to a .c file type
+
+> ctangle dance.w
+
+The alterations to Knuth's original program are minor -- I changed a
+couple of lines so that the program prints out all and only the
+information that we need (a list of partitions, one per line, and a
+concluding statement which shows the total number of partitions)
+

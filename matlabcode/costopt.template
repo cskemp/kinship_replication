@@ -1,0 +1,7 @@
+; run-specific parameters for scoring partitions
+;
+--outfile=outXX
+--partfile=partXX
+--compexfile=compXX
+--needfile=needXX
+--nhalf=nhalfXX

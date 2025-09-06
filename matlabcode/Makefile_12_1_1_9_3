@@ -1,0 +1,82 @@
+BASE=dlinkout_12_1_1_9_3.txt__
+OPTBASE=cx12_1_1_9_3.opt__
+
+all:  joba jobb jobc jobd jobe jobf jobg jobh jobi jobj jobk jobl jobm jobn jobo jobp jobq jobr jobs jobt jobu jobv jobw jobx
+
+r1:  joba jobb jobc jobd jobe jobf jobg jobh 
+
+r2:  jobi jobj jobk jobl jobm jobn jobo jobp 
+
+r3:  jobq jobr jobs jobt jobu jobv jobw jobx
+
+joba: 
+	scorecomplexity @${OPTBASE}a
+
+jobb: 
+	scorecomplexity @${OPTBASE}b
+
+jobc: 
+	scorecomplexity @${OPTBASE}c
+
+jobd: 
+	scorecomplexity @${OPTBASE}d
+
+jobe: 
+	scorecomplexity @${OPTBASE}e
+
+jobf: 
+	scorecomplexity @${OPTBASE}f
+
+jobg: 
+	scorecomplexity @${OPTBASE}g
+
+jobh: 
+	scorecomplexity @${OPTBASE}h
+
+jobi: 
+	scorecomplexity @${OPTBASE}i
+
+jobj: 
+	scorecomplexity @${OPTBASE}j
+
+jobk: 
+	scorecomplexity @${OPTBASE}k
+
+jobl: 
+	scorecomplexity @${OPTBASE}l
+
+jobm: 
+	scorecomplexity @${OPTBASE}m
+
+jobn: 
+	scorecomplexity @${OPTBASE}n
+
+jobo: 
+	scorecomplexity @${OPTBASE}o
+
+jobp: 
+	scorecomplexity @${OPTBASE}p
+
+jobq: 
+	scorecomplexity @${OPTBASE}q
+
+jobr: 
+	scorecomplexity @${OPTBASE}r
+
+jobs: 
+	scorecomplexity @${OPTBASE}s
+
+jobt: 
+	scorecomplexity @${OPTBASE}t
+
+jobu: 
+	scorecomplexity @${OPTBASE}u
+
+jobv: 
+	scorecomplexity @${OPTBASE}v
+
+jobw: 
+	scorecomplexity @${OPTBASE}w
+
+jobx: 
+	scorecomplexity @${OPTBASE}x
