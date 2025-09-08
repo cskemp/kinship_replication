@@ -96,6 +96,12 @@ patterns = [100, 10,10,  10, 10,10,6,1,0];
 groups = {[12]};
 rstages = {[8]};
 
+
+When updating the code I also
+
+* changed `makerwpartitions.m`, `makerwpartitionscomp.m`, and `murdockcode/makemasterrwpartitions.m` so that we can keep track of complexity and costs for attested systems
+* added a folder `2025_plots` that shows how to make plots with labels of attested systems
+
 What follows is the README that accompanied the 2012 release.    
 
 4/18/12, Code prepared by Charles Kemp (ckemp@cmu.edu)

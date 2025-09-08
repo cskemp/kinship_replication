@@ -15,6 +15,7 @@ ps.home = home(1:end-1);
 ps.outdir = ['../output/'];
 ps.outdirtmp = ['../output/tmp/'];
 ps.plotdir = ['../output/plots/'];
+ps.extradir = ['../2025_plots/'];
 
 % prefixes for generated file
 
@@ -32,11 +33,13 @@ ps.scorepref= 'score';
 ps.combopref= 'combinedscores';
 ps.domstatpref= 'domstat';
 ps.randindpref= 'randind';
+ps.mapindex = 'rwmapindex';
 
 % directory with kinship data
 ps.datadir= '../murdockdata/';
 % file with partitions for every culture in the Murdock files
 ps.masterrwpart= 'rwpartitions.txt';
+ps.masterrwcsv= 'murdock_orig_codes.csv';
 ps.tclosuremax = 12; % number of 1-link expansions that will guarantee
 		     % transitive closure (OK if this is larger than necessary)
 

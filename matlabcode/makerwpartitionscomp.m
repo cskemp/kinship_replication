@@ -13,7 +13,7 @@ for i = 1:ncomp
 end
 
 rwpartfile=[ps.outdir, ps.rwpartpref, num2str(x)];
-load(rwpartfile, 'rwp', 'rwfreqs');
+load(rwpartfile, 'rwp', 'rwfreqs', 'orig_indices');
 
 compactp = rwp;
 npart = size(compactp,1);
@@ -36,8 +36,26 @@ end
 partitions = partitions(includeind,:);
 compactp = compactp(includeind,:);
 rwfreqs = rwfreqs(includeind,:);
+orig_indices = orig_indices(includeind);
 
 outfile= [ps.outdir, ps.enumpref, num2str(x),  '_', num2str(ys(1)), '_', num2str(ys(2)), '_', num2str(ys(3)), '_', num2str(e),  '_rpt', num2str(r)];
 
 save(outfile, 'components', 'componentsm', 'partitions', 'compactp', 'rwfreqs')
+
+
+% We've created the list of attested partitions (compatcp) that will be actually used in the analyses -- so create and write a mapping matrix [original_row_index, final_system_index] that lets us identify specific cultures among the attested systems
+mapping = [];
+for k = 1:length(orig_indices)
+    prev_indices = transpose(orig_indices{k});  % Extract vector from cell k
+    final_indices = repmat(k, length(prev_indices), 1);  % Create matching pattern indices
+    mapping = [mapping; prev_indices, final_indices];  % Concatenate to mapping matrix
+end
+
+% Sort by prev row index for easier reading
+mapping = sortrows(mapping, 1);
+
+% Write to file
+mapfile=[ps.extradir, ps.mapindex, num2str(x), '.csv'];
+writematrix(mapping, mapfile, 'Delimiter', ',');
+
 
