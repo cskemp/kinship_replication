@@ -1,3 +1,11 @@
+2025 edit:
+----------
+Added code to makemasterrwpartitions.m that writes a mapping (system_mapping.txt) between the original index of a system in the Murdock file and the index of that system in rwpartitions.txt
+
+Then used system_mapping.txt to manually make murdock_orig_codes.csv, which includes Murdock's codes for each system and the index of that system (analysis_index) in rwpartitions.txt
+
+The rest of this file is the original README
+
 This directory contains the Murdock data and related scripts.
 
 Murdock data:

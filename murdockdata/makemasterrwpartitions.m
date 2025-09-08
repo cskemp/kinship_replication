@@ -9,6 +9,15 @@ freqs = transpose(hist(jj, 1:max(jj)));
 % matrix with encountered patterns and their frequencies (column 1)
 a = [freqs(sind), uu(sind,:)];
 
+% Create a cell array to store original row indices for each unique pattern
+original_rows = cell(length(uu), 1);
+for i = 1:length(uu)
+    original_rows{i} = find(jj == i);
+end
+% Sort the original_rows according to frequency ranking
+sorted_original_rows = original_rows(sind);
+
+
 % all indices here refer to the 114 individuals in the master tree
 ept = zeros(1,114);  % empty partition
 gpind =    [9:12,65:68];
@@ -112,14 +121,26 @@ end
 rws(isnan(rws)) = -1;
 
 [uu,ii,jj] = unique(rws, 'rows');
+
+final_original_rows = cell(length(uu), 1);
+
 for i = 1:length(ii)
   repeatind = find(jj==i);
   newfreqs(i) = sum(freqs(repeatind));
+
+  % Combine original row indices for patterns that got merged
+  combined_rows = [];
+  for j = 1:length(repeatind)
+    combined_rows = [combined_rows; sorted_original_rows{repeatind(j)}];
+  end
+  final_original_rows{i} = combined_rows;
 end
 
 [s,sind] = sort(newfreqs, 'descend');
 % first column will now store frequencies
 finalpartitions = [transpose(s), uu(sind,:)];
+
+final_sorted_original_rows = final_original_rows(sind);
 
 % write frequencies and partitions to file
 fid = fopen('rwpartitions.txt', 'w');
@@ -130,4 +151,17 @@ for i = 1:size(finalpartitions,1)
 end
 fclose(fid);
 
+% Create mapping matrix: [original_row_index, final_system_index]
+mapping = [];
+for k = 1:length(final_sorted_original_rows)
+    original_indices = final_sorted_original_rows{k};  % Extract vector from cell k
+    final_pattern_indices = repmat(k, length(original_indices), 1);  % Create matching pattern indices
+    mapping = [mapping; original_indices, final_pattern_indices];  % Concatenate to mapping matrix
+end
+
+% Sort by original row index for easier reading
+mapping = sortrows(mapping, 1);
+
+% Write to file
+writematrix(mapping, 'system_mapping.txt', 'Delimiter', '\t');
 
